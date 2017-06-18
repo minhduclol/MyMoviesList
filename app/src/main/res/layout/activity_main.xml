@@ -5,4 +5,4 @@
     android:id="@+id/lvMovies"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.webbuildup.mymovieslist.mymovieslist.MainActivity" />
+    tools:context="net.webbuildup.mymovieslist.mymovieslist.net.webbuildup.mymovieslist.controller.MainActivity" />

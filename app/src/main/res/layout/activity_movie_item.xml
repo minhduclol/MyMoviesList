@@ -7,15 +7,17 @@
     android:orientation="horizontal">
     <!-- add image -->
     <ImageView
+        android:id="@+id/ivCover"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_weight="1"
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
         android:src="@drawable/test_img" />
-    
+
     <!-- add title and description  -->
     <LinearLayout
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
@@ -23,16 +25,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp">
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
             tools:text="Movie title" />
         <TextView
+            android:id="@+id/tvOverview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
             tools:text="Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus." />
     </LinearLayout>
-
-
 </LinearLayout>
