@@ -3,9 +3,12 @@ package net.webbuildup.mymovieslist.controller;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,11 +49,19 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         Movie movie = movies.get(position);
         viewHolder.tvTitle.setText(movie.getTitle());
         viewHolder.tvOverview.setText(movie.getOverview());
+        Context context = getContext();
         /* Glide.with(getContext())
                 .load(movie.getPosterPath())
                 .into(viewHolder.ivCover); */
-        Picasso.with(getContext())
-                .load(movie.getPosterPath())
+        Display display = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        String imagePath = "";
+        if (display.getRotation() == Surface.ROTATION_90 || display.getRotation() == Surface.ROTATION_180) {
+            imagePath = movie.getBackdropPath();
+        } else {
+            imagePath = movie.getPosterPath();
+        }
+        Picasso.with(context)
+                .load(imagePath)
                 .placeholder(R.drawable.loading_img)
                 .error(R.drawable.error_img)
                 .into(viewHolder.ivCover);
