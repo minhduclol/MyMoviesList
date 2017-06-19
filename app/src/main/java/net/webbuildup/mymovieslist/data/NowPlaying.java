@@ -17,4 +17,12 @@ public class NowPlaying {
     public List<Movie> getMovieList() {
         return movies;
     }
+    public Movie getMovieID(long id) {
+        for (Movie movie : movies) {
+            if (movie.getId() == id) {
+                return movie;
+            }
+        }
+        return movies.get(0);
+    }
 }

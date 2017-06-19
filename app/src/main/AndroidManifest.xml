@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.webbuildup.mymovieslist.mymovieslist">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -17,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="net.webbuildup.mymovieslist.controller.movie_item"></activity>
+        <activity android:name="net.webbuildup.mymovieslist.controller.movie_item" />
+        <activity android:name="net.webbuildup.mymovieslist.controller.MovieDetailActivity"></activity>
     </application>
 
 </manifest>
